@@ -1,0 +1,33 @@
+# --- Scope control ---
+--languages=C
+--langmap=C:+.h
+--recurse=yes
+
+# --- Exclusions ---
+--exclude=*.o
+--exclude=*.ko
+--exclude=*.mod.c
+--exclude=.git/
+--exclude=Documentation/
+--exclude=scripts/
+--exclude=tools/
+--exclude=usr/
+--exclude=include/generated/
+
+# --- Kinds: only meaningful kernel symbols ---
+--c-kinds=+fpstuv
+
+# f  functions
+# p  prototypes
+# s  structs
+# t  typedefs
+# u  unions
+# v  variables
+
+# --- Extra metadata for better Vim navigation ---
+--fields=+iaS
+--extras=+q
+
+# --- Performance ---
+--sort=yes
+--tag-relative=yes
